@@ -1,0 +1,59 @@
+.offer__container {
+  width: 530px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.hero__container {
+  width: 100%;
+  border-radius: 40px;
+  background-image: url("../../../assets/images/img-hero.png");
+  background-position: center;
+  background-size: cover;
+  padding: 100px;
+}
+.heading-1 {
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 105%;
+  color: $text-light;
+}
+.button-primary {
+  width: fit-content;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: $bg-body;
+  padding: 20px 0px;
+  width: 200px;
+  height: 64px;
+  border-radius: 100px;
+  border: none;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  &:hover .button-primary__text {
+    left: 64px;
+  }
+  &:hover .button-primary__icon {
+    opacity: 1;
+  }
+}
+.button-primary__text {
+  position: absolute;
+  left: 78px;
+  transition: all 0.3s ease-in-out;
+}
+.button-primary__icon {
+  position: absolute;
+  right: 64px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+@media (max-width: 768px) {
+  .hero__container {
+    padding: 100px 60px;
+  }
+}

@@ -1,0 +1,74 @@
+.mobile-app__item {
+  width: 630px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 40px;
+  @media (max-width: 1000px) {
+    width: 100%;
+    &:last-child {
+      align-items: center;
+    }
+  }
+  img {
+    max-width: 100%;
+    @media (max-width: 768px) {
+      width: 630px;
+    }
+  }
+}
+.mobile-app__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: 1000px) {
+    flex-wrap: wrap;
+    gap: 100px;
+  }
+}
+.mobile-app__buttons {
+  display: flex;
+  gap: 20px;
+}
+.mobile-app__button {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  border: 1px solid $border-dark;
+  padding: 12px 20px;
+  justify-content: flex-start;
+  transition: all 0.3s ease-in-out;
+  .button-text {
+    text-align: left;
+    line-height: 140%;
+  }
+  & svg {
+    path {
+      transition: all 0.3s ease-in-out;
+    }
+  }
+  &:hover {
+    background-color: $border-dark;
+    color: $text-light;
+    svg {
+      path {
+        fill: $text-light;
+      }
+    }
+    .button-text {
+      color: $text-light;
+      .button-text_small {
+        color: $text-light;
+      }
+    }
+  }
+}
+.mobile-app__button_container {
+  
+}
+
+.button-text_small {
+  text-align: left;
+  font-size: 10px;
+  line-height: 140%;
+}

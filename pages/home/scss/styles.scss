@@ -1,0 +1,83 @@
+@import "_vars";
+@import "_header";
+@import "_hero";
+@import "_favorite-coffee";
+@import "_about";
+@import "mobile-app";
+@import "footer";
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  color: $text-dark;
+  scroll-behavior: smooth;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+.color-accent {
+  color: $text-accent;
+}
+.color-light {
+  color: $text-light;
+}
+.accent {
+  font-style: italic;
+}
+body {
+  background-color: $bg-body;
+  font-family: Inter;
+  font-size: 16px;
+  line-height: 150%;
+}
+button {
+  cursor: pointer;
+}
+[class*="__section"] {
+  display: flex;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.link {
+  font-weight: 600;
+  position: relative;
+}
+.link:after {
+	display: block;
+	position: absolute;
+	left: 0;
+  bottom: -4px;
+	width: 100%;
+	height: 2px;
+	background-color: $text-dark;
+  opacity: 0;
+	content: "";
+	transition: 0.5s ease;
+  transform: scaleX(0);
+}
+.link:hover:after,
+.link:focus:after {
+  opacity: 1;
+  transform: scaleX(1);
+  transition: 0.5s ease;
+}
+.heading-2{
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 125%;
+}
+.heading-3 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+}
